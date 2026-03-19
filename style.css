@@ -1878,7 +1878,8 @@ body {
 }
 
 .piano-hint {
-    color: black;
+    color: white;
+    oppacity: 0.1;
     font-size: 16px;
     text-align: center;
     margin-top: 200px;
