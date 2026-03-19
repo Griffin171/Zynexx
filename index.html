@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHITE SPACE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 
+        .-- . .-.. -.-. --- -- . / - --- / .-- .... .. - . / ... .--. .- -.-. .
+        
+        You've been living here for as long as you can remember.
+        
+        The knife is always in the same place.
+        The light never goes out.
+        MEWO never moves.
+        
+        But something feels different today.
+        
+        12 25 [shift: -13]
+    -->
+</head>
+<body>
+    
+    <!-- Language Selector (ALWAYS VISIBLE) -->
+    <div id="language-selector" class="language-selector">
+        <button class="lang-btn active" data-lang="pt" title="Português">PT</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <button class="lang-btn" data-lang="es" title="Español">ES</button>
+    </div>
+
+    <!-- Stage 0: WHITE SPACE -->
+    <main id="white-space" class="scene active">
+        <div class="room">
+            <!-- Light bulb -->
+            <div class="lightbulb-container">
+                <div class="lightbulb" id="bulb">
+                    <div class="bulb-cord"></div>
+                    <div class="bulb-base">
+                        <div class="bulb-screw"></div>
+                    </div>
+                    <div class="bulb-glass">
+                        <div class="bulb-filament"></div>
+                        <div class="bulb-highlight"></div>
+                    </div>
+                    <div class="bulb-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Sketchbook -->
+            <div class="sketchbook" id="sketchbook">
+                <div class="book-shadow"></div>
+                <div class="book-pages"></div>
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-title" data-i18n="sketchbook">SKETCHBOOK</div>
+                    <div class="book-decoration"></div>
+                </div>
+            </div>
+            
+            <!-- Mewo (black cat) -->
+            <div class="mewo" id="mewo">
+                <div class="cat-shadow"></div>
+                <div class="cat-body">
+                    <div class="cat-belly"></div>
+                </div>
+                <div class="cat-head">
+                    <div class="cat-ear left">
+                        <div class="ear-inner"></div>
+                    </div>
+                    <div class="cat-ear right">
+                        <div class="ear-inner"></div>
+                    </div>
+                    <div class="cat-face">
+                        <div class="cat-eye left">
+                            <div class="eye-pupil"></div>
+                            <div class="eye-shine"></div>
+                        </div>
+                        <div class="cat-eye right">
+                            <div class="eye-pupil"></div>
+                            <div class="eye-shine"></div>
+                        </div>
+                        <div class="cat-nose"></div>
+                        <div class="cat-whiskers left"></div>
+                        <div class="cat-whiskers right"></div>
+                    </div>
+                </div>
+                <div class="cat-tail">
+                    <div class="tail-segment s1"></div>
+                    <div class="tail-segment s2"></div>
+                    <div class="tail-segment s3"></div>
+                </div>
+                <div class="cat-legs">
+                    <div class="cat-leg front-left"></div>
+                    <div class="cat-leg front-right"></div>
+                    <div class="cat-leg back-left"></div>
+                    <div class="cat-leg back-right"></div>
+                </div>
+            </div>
+            
+            <!-- Knife -->
+            <div class="knife" id="knife">
+                <div class="knife-shadow"></div>
+                <div class="knife-blade">
+                    <div class="blade-edge"></div>
+                    <div class="blade-shine"></div>
+                </div>
+                <div class="knife-handle">
+                    <div class="handle-grip"></div>
+                    <div class="handle-detail"></div>
+                </div>
+            </div>
+            
+            <!-- Tissue box -->
+            <div class="tissue-box" id="tissues">
+                <div class="tissue-shadow"></div>
+                <div class="box">
+                    <div class="box-top"></div>
+                    <div class="box-front"></div>
+                    <div class="box-label"></div>
+                </div>
+                <div class="tissue"></div>
+            </div>
+            
+            <!-- Door (initially hidden) -->
+            <div class="door hidden" id="white-door">
+                <div class="door-glow"></div>
+                <div class="door-frame">
+                    <div class="door-panel">
+                        <div class="door-detail top"></div>
+                        <div class="door-detail bottom"></div>
+                    </div>
+                    <div class="door-knob">
+                        <div class="knob-shine"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instruction hint -->
+            <div class="instruction-hint" id="instruction-hint">
+                <p data-i18n="hint-explore">Click nos objetos para explorar</p>
+            </div>
+        </div>
+
+        <!-- Something watching -->
+        <div class="something" id="something">
+            <div class="something-eye"></div>
+            <div class="something-pupil"></div>
+        </div>
+    </main>
+
+    <!-- Stage 1: MEMORY LANE -->
+    <main id="memory-lane" class="scene">
+        <div class="memory-room">
+            <h2 class="scene-title" data-i18n="memory-title">Você se lembra?</h2>
+            
+            <div class="photo-album">
+                <div class="photo-stack">
+                    <!-- Photo 1 -->
+                    <div class="photo" data-memory="1" style="transform: rotate(-5deg);">
+                        <div class="photo-border">
+                            <div class="photo-image">
+                                <div class="drawn-scene scene-1">
+                                    <div class="sky"></div>
+                                    <div class="ground"></div>
+                                    <div class="sun"></div>
+                                    <div class="tree">
+                                        <div class="tree-trunk"></div>
+                                        <div class="tree-leaves"></div>
+                                    </div>
+                                    <div class="stick-figure" style="left: 25%;">
+                                        <div class="sf-head"></div>
+                                        <div class="sf-body"></div>
+                                        <div class="sf-arms"></div>
+                                        <div class="sf-legs"></div>
+                                    </div>
+                                    <div class="stick-figure" style="left: 65%;">
+                                        <div class="sf-head"></div>
+                                        <div class="sf-body"></div>
+                                        <div class="sf-arms"></div>
+                                        <div class="sf-legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-label" data-i18n="photo1">Verão</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 2 -->
+                    <div class="photo" data-memory="2" style="transform: rotate(3deg);">
+                        <div class="photo-border">
+                            <div class="photo-image">
+                                <div class="drawn-scene scene-2">
+                                    <div class="stage"></div>
+                                    <div class="piano-drawing">
+                                        <div class="piano-body"></div>
+                                        <div class="piano-keys"></div>
+                                        <div class="piano-lid"></div>
+                                    </div>
+                                    <div class="stick-figure" style="left: 50%;">
+                                        <div class="sf-head"></div>
+                                        <div class="sf-body"></div>
+                                        <div class="sf-arms"></div>
+                                        <div class="sf-legs"></div>
+                                    </div>
+                                    <div class="music-notes">
+                                        <span>♪</span>
+                                        <span>♫</span>
+                                        <span>♪</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-label" data-i18n="photo2">Recital</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 3 -->
+                    <div class="photo" data-memory="3" style="transform: rotate(-2deg);">
+                        <div class="photo-border">
+                            <div class="photo-image">
+                                <div class="drawn-scene scene-3">
+                                    <div class="house-wall"></div>
+                                    <div class="stairs-drawing">
+                                        <div class="stair-step" style="bottom: 0%;"></div>
+                                        <div class="stair-step" style="bottom: 10%;"></div>
+                                        <div class="stair-step" style="bottom: 20%;"></div>
+                                        <div class="stair-step" style="bottom: 30%;"></div>
+                                        <div class="stair-step" style="bottom: 40%;"></div>
+                                        <div class="stair-step" style="bottom: 50%;"></div>
+                                        <div class="stair-step" style="bottom: 60%;"></div>
+                                        <div class="stair-step" style="bottom: 70%;"></div>
+                                    </div>
+                                    <div class="flower-ground" style="bottom: 5%; left: 20%;">
+                                        <div class="fg-petals"></div>
+                                        <div class="fg-center"></div>
+                                        <div class="fg-stem"></div>
+                                    </div>
+                                    <div class="flower-ground" style="bottom: 5%; left: 70%;">
+                                        <div class="fg-petals"></div>
+                                        <div class="fg-center"></div>
+                                        <div class="fg-stem"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-label">12.25</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 4 (face down initially) -->
+                    <div class="photo clickable" data-memory="4" style="transform: rotate(7deg);">
+                        <div class="photo-border">
+                            <div class="photo-front">
+                                <div class="photo-back-pattern"></div>
+                                <p class="click-hint" data-i18n="photo-click">[ Clique para virar ]</p>
+                            </div>
+                            <div class="photo-image hidden">
+                                <div class="photo-back-content">
+                                    <p class="handwriting">GEHR VF ORUVAQ LBH</p>
+                                    <div class="hint-box">
+                                        <p class="hint-label">ROT13</p>
+                                        <p class="hint-subtext" data-i18n="cipher-hint">cifra de césar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memory-input">
+                <input type="text" id="memory-answer" placeholder="..." maxlength="20" data-i18n-placeholder="memory-placeholder">
+                <div class="input-hint" data-i18n="memory-hint">Digite o que você descobriu</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Stage 2: THE STAIRS -->
+    <main id="the-stairs" class="scene">
+        <div class="stair-room">
+            <h2 class="stair-title" data-i18n="stairs-title">Qual degrau mudou tudo?</h2>
+            
+            <div class="staircase">
+                <div class="stair-wall"></div>
+                <div class="stair" data-step="1"><span class="step-number">1</span></div>
+                <div class="stair" data-step="2"><span class="step-number">2</span></div>
+                <div class="stair" data-step="3"><span class="step-number">3</span></div>
+                <div class="stair" data-step="4"><span class="step-number">4</span></div>
+                <div class="stair" data-step="5"><span class="step-number">5</span></div>
+                <div class="stair" data-step="6"><span class="step-number">6</span></div>
+                <div class="stair" data-step="7"><span class="step-number">7</span></div>
+                <div class="stair" data-step="8"><span class="step-number">8</span></div>
+                <div class="stair" data-step="9"><span class="step-number">9</span></div>
+                <div class="stair" data-step="10"><span class="step-number">10</span></div>
+                <div class="stair" data-step="11"><span class="step-number">11</span></div>
+                <div class="stair" data-step="12"><span class="step-number">12</span></div>
+            </div>
+            
+            <div class="flowers-container">
+                <div class="flower" style="bottom: 15%; left: 25%;">
+                    <div class="flower-petals"></div>
+                    <div class="flower-center"></div>
+                    <div class="flower-stem"></div>
+                    <div class="flower-leaf left"></div>
+                    <div class="flower-leaf right"></div>
+                </div>
+                <div class="flower" style="bottom: 12%; left: 50%;">
+                    <div class="flower-petals"></div>
+                    <div class="flower-center"></div>
+                    <div class="flower-stem"></div>
+                    <div class="flower-leaf left"></div>
+                    <div class="flower-leaf right"></div>
+                </div>
+                <div class="flower" style="bottom: 18%; left: 70%;">
+                    <div class="flower-petals"></div>
+                    <div class="flower-center"></div>
+                    <div class="flower-stem"></div>
+                    <div class="flower-leaf left"></div>
+                    <div class="flower-leaf right"></div>
+                </div>
+            </div>
+
+            <div class="stair-hint" data-i18n="stairs-hint">Pense na data da foto anterior...</div>
+        </div>
+    </main>
+
+    <!-- Stage 3: BLACK SPACE -->
+    <main id="black-space" class="scene">
+        <div class="black-room">
+            <div class="hands-container" id="hands-container"></div>
+
+            <div class="center-area">
+                <h2 class="dark-title">SOMETHING</h2>
+                
+                <div class="piano-container">
+                    <div class="piano-body-main">
+                        <div class="piano-lid-main"></div>
+                        <div class="piano-keys">
+                            <div class="piano-key" data-note="C" data-freq="261.63">
+                                <div class="key-white">
+                                    <span class="key-label">C</span>
+                                </div>
+                            </div>
+                            <div class="piano-key" data-note="D" data-freq="293.66">
+                                <div class="key-white">
+                                    <span class="key-label">D</span>
+                                </div>
+                            </div>
+                            <div class="piano-key" data-note="E" data-freq="329.63">
+                                <div class="key-white">
+                                    <span class="key-label">E</span>
+                                </div>
+                            </div>
+                            <div class="piano-key" data-note="F" data-freq="349.23">
+                                <div class="key-white">
+                                    <span class="key-label">F</span>
+                                </div>
+                            </div>
+                            <div class="piano-key" data-note="G" data-freq="392.00">
+                                <div class="key-white">
+                                    <span class="key-label">G</span>
+                                </div>
+                            </div>
+                            <div class="piano-key" data-note="A" data-freq="440.00">
+                                <div class="key-white">
+                                    <span class="key-label">A</span>
+                                </div>
+                            </div>
+                            <div class="piano-key" data-note="B" data-freq="493.88">
+                                <div class="key-white">
+                                    <span class="key-label">B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="piano-hint" data-i18n="piano-hint">Toque o último acorde que ela tocou: E - G - B</div>
+                <div class="sequence-display" id="sequence-display"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Stage 4: THE TRUTH -->
+    <main id="the-truth" class="scene">
+        <div class="truth-room">
+            <div class="final-door-container">
+                <div class="final-door">
+                    <div class="door-glow-final"></div>
+                    <div class="door-frame-final">
+                        <div class="door-panel-final">
+                            <div class="door-window"></div>
+                        </div>
+                        <div class="door-knob-final">
+                            <div class="knob-shine-final"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="door-question" data-i18n="truth-question">Feche seus olhos...</p>
+            </div>
+
+            <div class="truth-input-container">
+                <input type="text" id="truth-answer" placeholder="" maxlength="10" data-i18n-placeholder="truth-placeholder">
+                <div class="truth-hint" data-i18n="truth-hint">Como você diz "boa noite" em japonês?</div>
+            </div>
+
+            <div class="floating-words">
+                <span style="top: 15%; left: 10%;" data-i18n="word1">lembrar</span>
+                <span style="top: 35%; right: 15%;" data-i18n="word2">escadas</span>
+                <span style="bottom: 35%; left: 20%;" data-i18n="word3">dezembro</span>
+                <span style="top: 55%; right: 10%;" data-i18n="word4">dormir</span>
+                <span style="bottom: 15%; left: 55%;" data-i18n="word5">sonho</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Final Scene -->
+    <main id="finale" class="scene">
+        <div class="end-space">
+            <h1 class="end-title" data-i18n="end-title">Você se lembrou.</h1>
+            <p class="end-quote" data-i18n="end-quote">"Eu preciso te contar algo."</p>
+            
+            <div class="final-image">
+                <div class="drawn-ending">
+                    <div class="figure-standing">
+                        <div class="figure-head"></div>
+                        <div class="figure-body"></div>
+                        <div class="figure-arms"></div>
+                        <div class="figure-legs"></div>
+                    </div>
+                    <div class="figure-shadow"></div>
+                </div>
+            </div>
+
+            <div class="credits-text">
+                <p data-i18n="credits1">Obrigado por lembrar.</p>
+                <p class="small-text" data-i18n="credits2">Feche seus olhos, você estará aqui logo.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="sounds.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
